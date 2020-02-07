@@ -3997,3 +3997,25 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+	.second-title-h2 {
+		margin-bottom: 40px;
+	}
+
+	.second-title-icons {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	
+	.showroom-inner {
+		justify-content: center;
+	}
+
+	.showroom-header {
+		padding: 0;
+	}
+
+	.showroom-header p, .showroom-header h2 {
+		text-align: center;
+	}
