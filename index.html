@@ -13,44 +13,35 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <link rel="stylesheet" href="assets/css/photoswipe.css" />
+    <link rel="stylesheet" href="assets/css/default-skin.css" />
   </head>
   <body class="landing is-preload">
     <!-- Page Wrapper -->
     <div id="page-wrapper">
-      <!-- Header -->
-      <header id="header" class="alt">
-        <h1><a href="index.html">VALANTO STORE</a></h1>
-        <nav id="nav">
-          <ul>
-            <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
-              <div id="menu">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="generic.html">Generic</a></li>
-                  <li><a href="elements.html">Elements</a></li>
-                  <li><a href="#">Sign Up</a></li>
-                  <li><a href="#">Log In</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
       <!-- Banner -->
       <section id="banner">
         <div class="inner">
-          <h2>VALANTO STORE</h2>
+          <!-- <h2>VALANTO STORE</h2> -->
+          <img src="images/logo_valanto.png" class="logo-image" />
           <p>
             Productos de ortopedia<br />
             de la mas distinguida calidad.<br />
-            Mercado Libre PLATINUM
+            MercadoLíder Platinum
           </p>
           <ul class="actions special">
             <li>
               <a href="#cta" class="button primary scrolly">Contactanos</a>
+            </li>
+            <li id="principal-whatsapp-button">
+              <a
+                href="whatsapp://send?text=Hola VALANTO STORE!&phone=+5491169333333"
+                class="icon brands fa-whatsapp fa-2x"
+                ><span class="label">Whatsapp</span></a
+              >
             </li>
           </ul>
         </div>
@@ -90,26 +81,25 @@
       <!-- Two -->
       <section id="two" class="wrapper alt style2">
         <section class="spotlight">
-          <div class="image"><img src="images/pic01.jpg" alt="" /></div>
+          <div class="image"><img src="images/vision.jpg" alt="" /></div>
           <div class="content">
             <h2>
               VISION
             </h2>
             <p>
-              Valanto.Store aspira a ser líder en nuestra comunidad ( comunidad
-              me parece una palabra muy genérica – podría ser algo asi: líder en
-              la innovación y la excelencia en el desarrollo de soluciones
-              personalizadas de vanguardia para proporcionar a nuestros clientes
-              una mejor calidad de vida. -Y listo..) Inspiración, motivación e
-              innovación están presentes en nuestro trabajo diario y nuestra
-              apuesta es superarnos constantemente en busca de la excelencia,
-              para proporcionar a nuestros clientes una mejor calidad de vida de
-              forma personalizada y con las mejores soluciones de vanguardia.
+              Valanto.Store aspira a ser líder en la innovación y la excelencia
+              en el desarrollo de soluciones personalizadas de vanguardia para
+              proporcionar a nuestros clientes una mejor calidad de vida.
+              Inspiración, motivación e innovación están presentes en nuestro
+              trabajo diario y nuestra apuesta es superarnos constantemente en
+              busca de la excelencia, para proporcionar a nuestros clientes una
+              mejor calidad de vida de forma personalizada y con las mejores
+              soluciones de vanguardia.
             </p>
           </div>
         </section>
         <section class="spotlight">
-          <div class="image"><img src="images/pic02.jpg" alt="" /></div>
+          <div class="image"><img src="images/mision.jpeg" alt="" /></div>
           <div class="content">
             <h2>
               MISION
@@ -125,7 +115,7 @@
           </div>
         </section>
         <section class="spotlight">
-          <div class="image"><img src="images/pic03.jpg" alt="" /></div>
+          <div class="image"><img src="images/valores.jpeg" alt="" /></div>
           <div class="content">
             <h2>
               VALORES
@@ -149,14 +139,14 @@
             </p>
           </header>
           <ul class="features">
-            <li class="icon fa-paper-plane">
+            <li class="icon fa-paper-plane" data-name="chairs">
               <h3>SILLA DE RUEDAS</h3>
               <p>
                 Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
                 tincidunt nullam amet leo Aenean ligula consequat consequat.
               </p>
             </li>
-            <li class="icon solid fa-laptop">
+            <li class="icon solid fa-laptop" data-name="medical">
               <h3>Ac Augue Eget</h3>
               <p>
                 Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
@@ -218,7 +208,7 @@
         <ul class="icons">
           <li>
             <a
-              href="whatsapp://send?text=Hola VALANTO STORE!&phone=+5491162987969"
+              href="whatsapp://send?text=Hola VALANTO STORE!&phone=+5491169333333"
               class="icon brands fa-whatsapp fa-2x"
               ><span class="label">Whatsapp</span></a
             >
@@ -243,6 +233,83 @@
           <li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </footer>
+
+      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+          <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+          <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+          </div>
+
+          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+          <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+              <!--  Controls are self-explanatory. Order can be changed. -->
+
+              <div class="pswp__counter"></div>
+
+              <button
+                class="pswp__button pswp__button--close"
+                title="Close (Esc)"
+              ></button>
+
+              <button
+                class="pswp__button pswp__button--share"
+                title="Share"
+              ></button>
+
+              <button
+                class="pswp__button pswp__button--fs"
+                title="Toggle fullscreen"
+              ></button>
+
+              <button
+                class="pswp__button pswp__button--zoom"
+                title="Zoom in/out"
+              ></button>
+
+              <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+              <!-- element will get class pswp__preloader--active when preloader is running -->
+              <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                    <div class="pswp__preloader__donut"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+            >
+              <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button
+              class="pswp__button pswp__button--arrow--left"
+              title="Previous (arrow left)"
+            ></button>
+
+            <button
+              class="pswp__button pswp__button--arrow--right"
+              title="Next (arrow right)"
+            ></button>
+
+            <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -253,5 +320,8 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/photoswipe.min.js"></script>
+    <script src="assets/js/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/gallery.js"></script>
   </body>
 </html>
