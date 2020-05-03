@@ -1,52 +1,42 @@
-var pswpElement = document.querySelectorAll(".pswp")[0];
+const pswpElement = document.querySelectorAll(".pswp")[0];
 
-// build items array
-var items = [
-  {
-    name: "chairs",
-    images: [
-      {
-        src: "./images/mision.jpeg",
-        w: 600,
-		h: 400,
-		title: "Silla de ruedas modelo 324345. Podés comprarla en el siguiente link: sarasda"
-      },
-      {
-        src: "https://placekitten.com/600/400",
-        w: 600,
-        h: 400,
-      },
-    ],
-  },
-  {
-    name: "medical",
-    images: [
-      {
-        src: "https://placekitten.com/1200/900",
-        w: 1200,
-        h: 900,
-      },
-    ],
-  },
-];
-
-// define options (if needed)
-var options = {
-  // optionName: 'option value'
-  // for example:
-  index: 0, // start at first slide
+const options = {
+  index: 0,
 };
 
-// Initializes and opens PhotoSwipe
+const categories = {
+  chairs: {
+    quantity: 4,
+    titles: ["Silla 1", "Silla 2", "Silla 3", "Silla 4"],
+  },
+};
 
-$(".features > li").on("click", function () {
-  const key = $(this).attr("data-name");
-  const category = items.find((x) => x.name === key);
+const getImages = (categoryName) => {
+  const category = categories[categoryName];
+  return category.titles.map((title, idx) => {
+    return {
+      src: `./images/${categoryName}/${idx + 1}.png`,
+      w: 800,
+      h: 500,
+      title,
+    };
+  });
+};
+
+const showImagesGalleryHandler = (ev) => {
+  const categoryName = ev.target.getAttribute("data-category");
+  openGallery(categoryName);
+};
+
+const openGallery = (categoryName) => {
   const gallery = new PhotoSwipe(
     pswpElement,
     PhotoSwipeUI_Default,
-    category.images,
+    getImages(categoryName),
     options
   );
   gallery.init();
-});
+};
+
+const buttonSelector = document.querySelector(".btn-show-pictures");
+buttonSelector.addEventListener("click", showImagesGalleryHandler);

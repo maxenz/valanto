@@ -2060,7 +2060,7 @@ body.landing {
       "background-image",
       (
         "linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))",
-        'url("../../images/banner.jpg")'
+        'url("../../images/background-image.jpg")'
       )
     );
     background-attachment: fixed;
@@ -2146,4 +2146,12 @@ ul.features {
       opacity: 0.7;
     }
   }
+}
+
+.btn-gallery {
+  border: 3px solid white;
+  color: white;
+  padding: 5px 10px;
+  background-color: transparent;
+  line-height: 21px;
 }
