@@ -4,39 +4,28 @@ const options = {
   index: 0,
 };
 
-const categories = {
-  chairs: {
-    quantity: 4,
-    titles: ["Silla 1", "Silla 2", "Silla 3", "Silla 4"],
-  },
-};
-
-const getImages = (categoryName) => {
-  const category = categories[categoryName];
-  return category.titles.map((title, idx) => {
-    return {
-      src: `./images/${categoryName}/${idx + 1}.png`,
-      w: 800,
+const getImages = () => {
+  const images = [];
+  for (let i = 1; i <= 8; i++) {
+    images.push({
+      src: `./images/products/${i}.png`,
+      w: 500,
       h: 500,
-      title,
-    };
-  });
+      title: '',
+    })
+  }
+  return images;
 };
 
-const showImagesGalleryHandler = (ev) => {
-  const categoryName = ev.target.getAttribute("data-category");
-  openGallery(categoryName);
-};
-
-const openGallery = (categoryName) => {
+const openGallery = () => {
   const gallery = new PhotoSwipe(
     pswpElement,
     PhotoSwipeUI_Default,
-    getImages(categoryName),
+    getImages(),
     options
   );
   gallery.init();
 };
 
-const buttonSelector = document.querySelector(".btn-show-pictures");
-buttonSelector.addEventListener("click", showImagesGalleryHandler);
+const buttonSelector = document.querySelector("#galleryButton");
+buttonSelector.addEventListener("click", openGallery);

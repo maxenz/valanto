@@ -1624,13 +1624,13 @@ button,
     input[type="button"].primary:hover,
     button.primary:hover,
     .button.primary:hover {
-      background-color: #ef5e4a !important; }
+      background-color: #ef5e4a; }
     input[type="submit"].primary:active,
     input[type="reset"].primary:active,
     input[type="button"].primary:active,
     button.primary:active,
     .button.primary:active {
-      background-color: #eb341c !important; }
+      background-color: #eb341c; }
   input[type="submit"].disabled, input[type="submit"]:disabled,
   input[type="reset"].disabled,
   input[type="reset"]:disabled,
@@ -2644,3 +2644,30 @@ ul.features li {
   padding: 5px 10px;
   background-color: transparent;
   line-height: 21px; }
+
+a.button.primary.scrolly {
+  background-color: #21b2a6; }
+  a.button.primary.scrolly:hover {
+    background-color: #21b2a6;
+    opacity: 0.8; }
+
+#three {
+  background-color: #21b2a6; }
+  #three header {
+    margin-bottom: 0; }
+  #three .major p {
+    color: white; }
+
+.button-gallery-container {
+  text-align: center;
+  margin-bottom: 30px; }
+
+#galleryButton {
+  padding: 0 20px;
+  border: 3px solid white;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: none;
+  line-height: 30px;
+  height: 60px; }
